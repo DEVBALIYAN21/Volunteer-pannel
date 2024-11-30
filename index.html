@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .category-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .category-list li {
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .category-list li:hover {
+            transform: scale(1.05);
+        }
+        
+        .category-list li img {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .category-list li a {
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .category-list li a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Volunteer Search</h1>
+    </header>
+    <main>
+        <section class="categories">
+            <h2>Categories</h2>
+            <ul class="category-list">
+                <li>
+                    <img src="blood.png" alt="Blood Donation Image">
+                    <a href="events.html?category=blood_donation">Blood Donation</a>
+                </li>
+                <li>
+                    <img src="clean.jpeg" alt="Cleaning Image">
+                    <a href="events.html?category=cleaning">Cleaning</a>
+                </li>
+                <li>
+                    <img src="club.jpeg" alt="Clubs Activity Image">
+                    <a href="events.html?category=clubs_activity">Clubs Activity</a>
+                </li>
+                <li>
+                    <img src="nss.png" alt="NSS Image">
+                    <a href="events.html?category=nss">NSS</a>
+                </li>
+                <!-- <li>
+                    <img src="nss.png" alt="NSS Image"> also change the src and alt with your actual image name also check for format .
+                    <a href="events.html?category=newcat">New cat</a> make chages after category in the href and aslo change the name 
+                </li> -->
+                <!-- Add more categories as needed -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Volunteer Search</p>
+    </footer>
+</body>
+
+</html>

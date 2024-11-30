@@ -1,0 +1,534 @@
+/* Modal Styles */
+.modal-content button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: auto;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #45a049;
+}
+.no-events-message {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333; /* Darker text color */
+    padding: 20px;
+    border: 2px solid #007bff; /* Solid border with a different color */
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a shadow */
+    transition: transform 0.3s ease; /* Add a transition for the hover effect */
+}
+
+.no-events-message:hover {
+    transform: scale(1.05); /* Add a hover effect */
+}
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Add this line to create a blur effect */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+
+
+.modal-content {
+    position: relative; /* Add this line */
+    background-color: #fefefe;
+    margin: 5% auto;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    position: absolute; /* Add this line */
+    top: 10px; /* Add this line */
+    right: 10px; /* Add this line */
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px; /* Adjust this value as needed for desktop */
+}
+
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%; /* Adjust this value as needed */
+        max-width: 90vw; /* Adjust this value as needed */
+    }
+
+    .modal-content input[type="text"],
+    .modal-content input[type="email"],
+    .modal-content input[type="tel"],
+    .modal-content textarea {
+        padding: 4px; /* Decreased from 6px */
+        font-size: 10px; /* Decreased from 14px */
+        height: 30px; /* Adjust this value as needed */
+    }
+
+    .modal-content button[type="submit"] {
+        padding: 6px 12px; /* Decreased from 8px 16px */
+        font-size: 12px; /* Decreased from 14px */
+    }
+
+    .modal-content label {
+        font-size: 12px; /* Decreased from 16px */
+    }
+}
+
+
+@media screen and (min-width: 601px) {
+    .modal-content input[type="text"],
+    .modal-content input[type="email"],
+    .modal-content input[type="tel"],
+    .modal-content textarea {
+        padding: 4px; /* Decreased from 6px */
+        font-size: 10px; /* Decreased from 14px */
+        height: 30px; /* Adjust this value as needed */
+    }
+
+    .modal-content button[type="submit"] {
+        padding: 8px 16px; /* Decreased from 8px 16px */
+        font-size: 16px; /* Decreased from 14px */
+    }
+}
+
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"],
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.modal-content textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+
+
+.modal-content .close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Other Styles */
+.event-list {
+    margin-top: 20px;
+}
+
+#event-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#event-list li {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+#event-list li strong {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#event-list li .description {
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+#event-list li .details {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+#event-list li .location {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#event-list li .points {
+    margin-right: 20px;
+}
+
+#event-list li .volunteers {
+    margin-right: 20px;
+}
+
+#event-list li .date {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+#event-list li .logo {
+    width: 16px;
+    vertical-align: middle;
+}
+
+.event-list .event-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-list .apply-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+
+.event-list .apply-btn:hover {
+    background-color: #45a049;
+}
+.event-list .apply-btn-container {
+    text-align: center; /* Center the apply button div */
+    margin-top: 10px;
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+        margin: 5% auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .event-list li {
+        font-size: 14px;
+    }
+
+    .event-list li .apply-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .event-list li {
+        font-size: 12px;
+    }
+
+    .event-list li .apply-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+
+html, body {
+    font-family: arial;
+    height: 100%;
+    padding: 0 0 50px 0; /* Add bottom padding */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+/* Make the scrolling smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Change the scrollbar color */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background:rgba(0, 123, 255, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:rgba(0, 123, 255, 0.8);
+}
+.message-modal {
+    display: none;
+    background-color: #fefefe;
+    border-radius: 8px;
+    padding: 10px; /* Reduced from 20px */
+    max-width: 300px; /* Reduced from 600px */
+    border: 4px solid #888;
+    width: 50%; /* Reduced from 80% */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1100;
+}
+
+.message-modal-content {
+    background-color: #fefefe;
+    border-radius: 8px;
+    color: white;
+    border: 3px solid #888;
+    width: 100%; /* Adjusted to 100% */
+    text-align: center;
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+    .message-modal {
+        width: 70%; /* Adjusted from 90% */
+    }
+}
+
+
+.message-modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.message-modal .close:hover,
+.message-modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+footer {
+    background-color: rgba(0, 123, 255, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px; /* Specify a height for the footer */
+}
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('hero.png');
+    background-size: cover;
+    filter: blur(15px);
+    z-index: -1;
+}
+
+
+header {
+    position: relative;
+    color:white;
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('hero.png');
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+main {
+    padding: 80px;
+    flex:1;
+}
+
+.event-list {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: large;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+strong {
+    display: block;
+    font-size: 1.5em;
+}
+
+.description {
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 20px;
+    /* Adjust the width of the logo as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 5px;
+    /* Add this line */
+}
+
+.details span {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.details span i {
+    margin-right: 5px;
+}
+
+.date {
+    margin-bottom: 10px;
+    /* Adjust the margin as needed */
+    margin-top: 2%;
+}
+
+.get-on-maps-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:disabled,
+.get-on-maps-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.apply-btn:hover,
+.get-on-maps-btn:hover {
+    background-color: #0056b3;
+}
+.centered-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust this margin as per your design */
+}
+
+
+
+
+/* events.css */
+
+
+/* Style for the custom logos */
+
+.logo {
+    width: 20px;
+    /* Adjust the width as needed */
+    height: 20px;
+    /* Adjust the height as needed */
+    margin-right: 5px;
+    /* Add margin between the logo and its name */
+}
+
+
+/* Style for the event details */
+
+.details {
+    margin-top: 10px;
+    /* Add some space between the event details and the logos */
+}
+
+
+/* Style to position the footer at the bottom */
+
